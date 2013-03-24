@@ -10,7 +10,6 @@ public class XmlParserN extends XmlParser {
 		Map<String, String> values = new HashMap<String, String>(32);
 		int elementStart = -1;
 		String element;
-
 		int space = -1;
 		int valueStart = -1;
 
@@ -43,7 +42,7 @@ public class XmlParserN extends XmlParser {
 				else {
 					// while (xml.charAt(++i) == ' ');
 					attribute = xml.substring(attributeStart, i);
-					attributeStart = -1;
+					//attributeStart = -1;
 				}
 				// if (space != -1) space = i; // --could be a space before
 				// equals sign
@@ -59,7 +58,7 @@ public class XmlParserN extends XmlParser {
 			}
 		}
 
-		System.out.println(values);
+		//System.out.println(values);
 
 		this.messageId = values.get("messageId");
 		this.identity = values.get("identity");
