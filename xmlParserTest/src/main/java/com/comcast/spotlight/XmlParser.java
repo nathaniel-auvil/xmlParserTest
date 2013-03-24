@@ -14,4 +14,36 @@ public abstract class XmlParser {
 
 	public abstract void parse(String xml);
 
+	public String getMessageId() {
+		return messageId;
+	}
+
+	public void setMessageId(String messageId) {
+		this.messageId = messageId;
+	}
+
+	public String getIdentity() {
+		return identity;
+	}
+
+	public void setIdentity(String identity) {
+		this.identity = identity;
+	}
+
+	public String getValue() {
+		return value;
+	}
+
+	public void setValue(String value) {
+		this.value = value;
+	}
+
+	public String getQueryId() {
+		return queryId;
+	}
+
+	public void setQueryId(String queryId) {
+		this.queryId = queryId;
+	}
+
 }

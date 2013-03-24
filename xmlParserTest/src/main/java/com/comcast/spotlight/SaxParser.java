@@ -19,7 +19,6 @@ public class SaxParser extends DefaultHandler {
 		factory.setNamespaceAware(true);
 	}
 	
-	
 	protected String messageId;
 	protected String identity;
 	protected String value;
