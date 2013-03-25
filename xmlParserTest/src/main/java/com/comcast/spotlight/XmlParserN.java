@@ -17,7 +17,7 @@ public class XmlParserN extends XmlParser {
 		String attribute = null;
 
 		for (int i = 0; i < xml.length(); i++) {
-			//System.out.println("xml.charAt(" + i + "): " + xml.charAt(i));
+			System.out.println("xml.charAt(" + i + "): " + xml.charAt(i));
 
 			switch (xml.charAt(i)) {
 
@@ -35,15 +35,15 @@ public class XmlParserN extends XmlParser {
 					attributeStart = i;
 				}
 				else {
-					// while (xml.charAt(++i) == ' ');
 					attribute = xml.substring(attributeStart, i);
 					attributeStart = -1;
+					//while (xml.charAt(++i) == ' ');
 				}
 
 				break;
 
 			case '=':
-				//--if there was a space before equals, we will already have attribute
+				// --if there was a space before equals, we will already have attribute
 				if (attributeStart != -1) {
 					attribute = xml.substring(attributeStart, i);
 					attributeStart = -1;
@@ -66,7 +66,7 @@ public class XmlParserN extends XmlParser {
 			}
 		}
 
-		//System.out.println(values);
+		System.out.println(values);
 
 		this.messageId = values.get("messageId");
 		this.identity = values.get("identity");
